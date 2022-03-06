@@ -29,6 +29,10 @@ public class AddressBookMain {
                     String check = Sc.next();
                     addressBook.modifyContacts(check);
                     break;
+                case 3:
+                    System.out.println("Enter the contact which you want to delete");
+                    String delete =Sc.next();
+                    addressBook.deleteContacts(delete);
             }
             System.out.println("1. Add contacts to the addressbook.");
             System.out.println("2. Modify the contact");
