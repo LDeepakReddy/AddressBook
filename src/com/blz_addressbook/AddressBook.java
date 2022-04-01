@@ -82,15 +82,30 @@ public class AddressBook {
 
             System.out.println(AddressBook.Contacts);
         }
-
+        displayContacts();
     }
-    public void deleteContacts(String delete){
-        for (Contacts contacts : Contacts){
-            if (contacts.getFirstName().equals(delete)){
+
+    public void deleteContacts(String delete) {
+        for (Contacts contacts : Contacts) {
+            if (contacts.getFirstName().equals(delete)) {
                 Contacts.remove(contacts);
             }
             System.out.println(AddressBook.Contacts);
-            break;
+
+        }
+        displayContacts();
+
+    }
+
+    public void displayContacts() {
+        for (Contacts show : Contacts) {
+            System.out.println(show.getFirstName()
+                    + show.getLastName()+ " "
+                    + show.getAddress() + " "
+                    + show.getCity() + " "
+                    + show.getState()+ " "
+                    + show.getZip()+ " "
+                    + show.getEmail());
         }
 
     }
