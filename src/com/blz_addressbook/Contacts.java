@@ -10,12 +10,12 @@ public class Contacts {
     private long phoneNumber;
     private String email;
 
-    public Contacts(){
+    public Contacts() {
 
     }
 
     public Contacts(String firstName, String lastName, String address, String city, String state, int zip,
-                   long phoneNumber, String email) {
+                    long phoneNumber, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
@@ -86,6 +86,7 @@ public class Contacts {
     public String getEmail() {
         return email;
     }
+
 
     public void setEmail(String email) {
         this.email = email;

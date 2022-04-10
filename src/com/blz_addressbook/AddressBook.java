@@ -100,16 +100,15 @@ public class AddressBook {
     public void displayContacts() {
         for (Contacts show : Contacts) {
             System.out.println(show.getFirstName()
-                    + show.getLastName()+ " "
+                    + show.getLastName() + " "
                     + show.getAddress() + " "
                     + show.getCity() + " "
-                    + show.getState()+ " "
-                    + show.getZip()+ " "
+                    + show.getState() + " "
+                    + show.getZip() + " "
                     + show.getEmail());
         }
 
     }
 
 }
-
 
