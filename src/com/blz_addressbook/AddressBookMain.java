@@ -17,7 +17,7 @@ public class AddressBookMain {
         int continueFlag;
         do {
             System.out.print("\n-------------");
-            System.out.print("\nAddress Book Menu");
+            System.out.print("\n### Address Book Menu ###");
             System.out.print("\n-------------");
             System.out.print("\n1.Add Contact \n2.Edit Contact \n3.Delete Contact \n4.Display Address Book\n5.Search Person");
             System.out.print("\n\nChoose your option : ");
@@ -33,7 +33,10 @@ public class AddressBookMain {
                     operate.deleteContact();
                     break;
                 case 4:
-                    operate.showAddressBook();
+                    operate.showAddrBook();
+                    break;
+                case 5:
+                    operate.searchPerson();
                     break;
                 default:
                     System.out.print("\nInvalid option");
