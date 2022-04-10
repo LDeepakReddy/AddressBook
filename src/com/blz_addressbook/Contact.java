@@ -1,6 +1,6 @@
 package com.blz_addressbook;
 
-public class Contacts {
+public class Contact {
     private String firstName;
     private String lastName;
     private String address;
@@ -10,12 +10,12 @@ public class Contacts {
     private long phoneNumber;
     private String email;
 
-    public Contacts() {
+    public Contact() {
 
     }
 
-    public Contacts(String firstName, String lastName, String address, String city, String state, int zip,
-                    long phoneNumber, String email) {
+    public Contact(String firstName, String lastName, String address, String city, String state, int zip,
+                   long phoneNumber, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
@@ -26,9 +26,9 @@ public class Contacts {
         this.email = email;
     }
 
-
     public String getFirstName() {
         return firstName;
+
     }
 
     public void setFirstName(String firstName) {
@@ -87,23 +87,7 @@ public class Contacts {
         return email;
     }
 
-
     public void setEmail(String email) {
         this.email = email;
     }
-
-    @Override
-    public String toString() {
-        return "Contacts{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", address='" + address + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", zip=" + zip +
-                ", phoneNumber=" + phoneNumber +
-                ", email='" + email + '\'' +
-                '}';
-    }
 }
-
