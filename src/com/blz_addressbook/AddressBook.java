@@ -1,18 +1,36 @@
 package com.blz_addressbook;
 
 import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AddressBook {
-    private List<Contact> contacts;
+    String addrName;
+    List<PersonContact> personList = new ArrayList<>();
 
-    public List<Contact> getContacts() {
-        return contacts;
+    public AddressBook(String addrName) {
+
+        this.addrName = addrName;
     }
 
-    public void setContacts(List<Contact> contacts) {
-        this.contacts = contacts;
+    public void setAddrName(String addrName) {
+        this.addrName = addrName;
+    }
+
+    public String getAddrName() {
+        return addrName;
+    }
+
+    public List<PersonContact> getPersonList() {
+        return personList;
+    }
+
+    public void addContactToList(PersonContact contact) {
+
+        this.personList.add(contact);
     }
 }
+
 
 
 
