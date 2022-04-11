@@ -22,7 +22,8 @@ public class AddressBookMain {
         System.out.println("Enter your choice");
         System.out.println(
                 "1 : Add new contact    2 : Edit contact  3 : Delete contact  4: Add Multiple Contacts 5: Display Contacts  6:Search Person " +
-                        "7: Person with City and State\" 8: Count person by city and state 9: Sorted Person's by alphabetically in Address Book ");
+                        "7: Person with City and State\" 8: Count person by city and state " +
+                        "9: Sort contact by alphabetically in Address Book 10: Sort contacts by alphabetically by City State And Zip Code ");
         int choice = sc.nextInt();
         switch (choice) {
             case 1:
@@ -134,6 +135,11 @@ public class AddressBookMain {
             case 9:
                 addressbooks.sortEntriesInAddressBookByName();
                 addressbooks.addContacts();
+                break;
+            case 10:
+                addressbooks.sortEntriesInAddressBookByCitySateAndZip();
+                addressbooks.addContacts();
+
                 break;
             default:
                 System.out.println("Please Enter correct choice");
@@ -357,6 +363,29 @@ public class AddressBookMain {
                     .collect(Collectors.toList());
 
             sortedList.forEach(con -> System.out.println(con.getFirstName()));
+        }
+
+    }
+
+    public void sortEntriesInAddressBookByCitySateAndZip() {
+        List<Contact> contactsList = new ArrayList<>();
+        for (Map.Entry<String, AddressBook> set : addressBookSystem.entrySet()) {
+            AddressBook addressBook = set.getValue();
+            contactsList = addressBook.getContacts();
+            System.out.println("Sorted contacts by alphabetically in Address Book");
+
+            List<Contact> sortedListCity = contactsList.stream().sorted(Comparator.comparing(Contact::getCity))
+                    .collect(Collectors.toList());
+            sortedListCity.forEach(con -> System.out.println(con.getCity()));
+
+            List<Contact> sortedListState = contactsList.stream().sorted(Comparator.comparing(Contact::getCity))
+                    .collect(Collectors.toList());
+            sortedListState.forEach(con -> System.out.println(con.getState()));
+
+            List<Contact> sortedListZip = contactsList.stream().sorted(Comparator.comparing(Contact::getZip))
+                    .collect(Collectors.toList());
+            sortedListZip.forEach(con -> System.out.println(con.getZip()));
+
         }
 
     }
